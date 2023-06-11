@@ -94,3 +94,7 @@ similar = model.wv.most_similar('war')
 
 
 
+
+
+
+

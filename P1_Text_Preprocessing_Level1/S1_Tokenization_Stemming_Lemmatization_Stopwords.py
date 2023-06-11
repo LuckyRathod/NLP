@@ -81,7 +81,7 @@ stemmer = PorterStemmer()
 
 for i in range(len(sentences_steming)):
     words = nltk.word_tokenize(sentences_steming[i])
-    words = [stemmer.stem(word) for word in words if word not in set(stopwords.words('english'))]
+    words = [stemmer.stem(word) for word in words if not word in set(stopwords.words('english'))]
     sentences_steming[i] = ' '.join(words)
 
 
@@ -121,7 +121,7 @@ lemmatizer= WordNetLemmatizer()
 
 for i in range(len(sentences_lemmatization)):
     words = nltk.word_tokenize(sentences_lemmatization[i])
-    words = [lemmatizer.lemmatize(word) for word in words if word not in set(stopwords.words('english'))]   
+    words = [lemmatizer.lemmatize(word) for word in words if not word in set(stopwords.words('english'))]   
     sentences_lemmatization[i] = ' '.join(words)
 
 
